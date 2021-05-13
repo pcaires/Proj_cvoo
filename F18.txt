@@ -1,0 +1,23 @@
+-- f18 : flight condition : 2
+    h =1000 m; M =0.40; aa0 =7.17 deg ; gg0 =0 deg ; u0 =261.4 kn ; flaps =0 deg .
+    throttle : th0 =73(%); de0 =0.00 deg ; da0 =0.00 deg ; dr0 =0.00 deg ;
+    Teng =0.50 s; demax =+28/ -22 deg ; damax =18 deg ; drmax =23 deg ; flapmax =40 deg
+    
+inertial data :
+    m =13054 kg ; Ix =606886 kg .m ^2; Iy =105563 kg .m ^2; Iz =632778 kg .m ^2; Ixz =2034 kg .m ^2
+    
+wing data : S =37.16 m ^2; b =11.430 m; c =1.778 m; aamax =12.95 deg
+
+derivatives ( no units or SI units ):
+
+xu       xw      zu       zw      zwp     zq     mu      mw      mq      mwp
+-0.0900 0.0310 -0.1356 -1.1612 -0.0035 -0.5354 0.0000 -0.0034 -0.0407 0.0007
+
+   ybb      lbb   nbb   yp      lp      np      yr      lr      nr
+-0.2289 -0.3440 1.3196 0.0010 -0.5551 0.0042 0.0042 -0.0585 -0.0737
+
+  xde   zde    mde    xdsp  zdsp  mdsp   xdt   zdt   mdt
+0.000 -0.015 -0.045 -1.371 2.579 0.441 16.296 0.000 0.000
+
+  Lda     Nda    Ydr     Ldr    Ndr
+-30.698 -0.249 -0.003 -0.016 -0.051
