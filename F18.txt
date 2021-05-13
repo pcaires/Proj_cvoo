@@ -1,6 +1,8 @@
 -- f18 : flight condition : 2
     h =1000 m; M =0.40; aa0 =7.17 deg ; gg0 =0 deg ; u0 =261.4 kn ; flaps =0 deg .
+    
     throttle : th0 =73(%); de0 =0.00 deg ; da0 =0.00 deg ; dr0 =0.00 deg ;
+    
     Teng =0.50 s; demax =+28/ -22 deg ; damax =18 deg ; drmax =23 deg ; flapmax =40 deg
     
 inertial data :
@@ -21,3 +23,6 @@ xu       xw      zu       zw      zwp     zq     mu      mw      mq      mwp
 
   Lda     Nda    Ydr     Ldr    Ndr
 -30.698 -0.249 -0.003 -0.016 -0.051
+
+
+
