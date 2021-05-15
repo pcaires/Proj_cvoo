@@ -1,3 +1,9 @@
+clear all
+t_ini = 0  // Tempo inicio sim (s)
+t_fin = 60 // Tempo fim de sim (s)
+t_s = 0.01 // Periodo de sample (s)
+
+
 g = 9.81 // m*s^-2
 
 aa0 =7.17 //deg
@@ -68,5 +74,5 @@ B = [Yda   Ydr;
      0    0;
      0    0]
 
-C = eye(3,3)
-D = zeros(3,2)
+C = eye(5,5)
+D = zeros(5,2)
