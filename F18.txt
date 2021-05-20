@@ -25,4 +25,14 @@ xu       xw      zu       zw      zwp     zq     mu      mw      mq      mwp
 -30.698 -0.249 -0.003 -0.016 -0.051
 
 
+Sens
+alt barom 	0-40kft / 0-28Vdc T = 100ms
+Tas 		0-1000kt / 0-28Vdc T = 100ms
+ang aero 	+-25deg / 0-5Vdc  T = 10ms noise 0.25deg rms
+
+
+Act
+sup controlo damax =18 deg ; drmax =23 deg; vel max 1 rad/s T = 100ms
+freq amost 100Hz
+
 
