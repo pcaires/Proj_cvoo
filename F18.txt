@@ -28,7 +28,14 @@ xu       xw      zu       zw      zwp     zq     mu      mw      mq      mwp
 Sens
 alt barom 	0-40kft / 0-28Vdc T = 100ms
 Tas 		0-1000kt / 0-28Vdc T = 100ms
-ang aero 	+-25deg / 0-5Vdc  T = 10ms noise 0.25deg rms
+ang aero (bb) 	+-25deg / 0-5Vdc  T = 10ms noise 0.25deg rms
+ang rol		+-90deg / 0-28Vdc noise 0.25deg rms
+ang pic		+-60deg / 0-28Vdc noise 0.25deg rms
+ang gui		+-360deg / 0-25Vdc noise 1.5deg rms
+ang rate 	+-50deg/s / +-3Vdc noise 2mV rms
+ILS(LOC GS)	+-150uA (LOC) +-20uA (GS) /sens 3.63 uA/deg
+Rasio alt 	0-1500ft / gain 10mVdc/ft /rel noise 1.5%RMS
+GPS 		(EAST, NORTH, UP) (m) / horizontal resolution 0.5m / rate 1Hz / noise [6m RMS hor][9m RMS vert]
 
 
 Act

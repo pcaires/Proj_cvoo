@@ -1,7 +1,6 @@
-clear
 t_ini = 0  // Tempo inicio sim (s)
 t_fin = 60 // Tempo fim de sim (s)
-t_s = 0.01 // Periodo de sample (s)
+t_s = 1/250 // Periodo de sample (s)
 
 
 g = 9.81 // m*s^-2
@@ -10,11 +9,6 @@ aa0 =7.17 //deg
 u0 =261.4 //kn
 u0 = u0*0.51444444444 // m*s^-1
 tt0 = aa0
-
-damax =18 //deg 
-drmax =23 //deg
-damax = damax*pi/180
-drmax = drmax*pi/180
 
 m =13054 //kg
 Ix =606886 //kg .m ^2
