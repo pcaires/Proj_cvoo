@@ -56,7 +56,7 @@ N_da = Nda + Ixz/Iz*Lda
 N_dr = Ndr * Ixz/Iz*Ldr
 
 
-//x = [ v; p; r; phi; psi]
+//x = [ bb; p; r; phi; psi]
 
 
 A = [ybb yp+aa0 yr-1          g*cosd(tt0)/u0   0;
