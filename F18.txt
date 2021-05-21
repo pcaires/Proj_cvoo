@@ -7,6 +7,8 @@
     
 inertial data :
     m =13054 kg ; Ix =606886 kg .m ^2; Iy =105563 kg .m ^2; Iz =632778 kg .m ^2; Ixz =2034 kg .m ^2
+
+Classe IV categoria B
     
 wing data : S =37.16 m ^2; b =11.430 m; c =1.778 m; aamax =12.95 deg
 
