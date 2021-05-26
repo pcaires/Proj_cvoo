@@ -6,6 +6,7 @@ t_s = 1/250 // Periodo de sample (s)
 g = 9.81 // m*s^-2
 
 aa0 =7.17 //deg
+aa0 = aa0 * %pi/180
 u0 =261.4 //kn
 u0 = u0*0.51444444444 // m*s^-1
 tt0 = aa0
@@ -38,12 +39,15 @@ Ldr = -0.016
 Ndr = -0.051
 
 
-yv = ybb/u0
-lv = lbb/u0
-nv = nbb/u0
+//yv = ybb/u0
+//lv = lbb/u0
+//nv = nbb/u0
 
-l_v = lv + Ixz/Ix*nv
-n_v = nv + Ixz/Iz*lv
+//l_v = lv + Ixz/Ix*nv
+//n_v = nv + Ixz/Iz*lv
+
+l_bb = lbb + Ixz/Ix*nbb
+n_bb = nbb + Ixz/Iz*lbb
 
 l_p = lp + Ixz/Ix*np
 l_r = lr + Ixz/Ix*nr
@@ -59,11 +63,11 @@ N_dr = Ndr * Ixz/Iz*Ldr
 //x = [ bb; p; r; phi; psi]
 
 
-A = [ybb yp+aa0 yr-1          g*cosd(tt0)/u0   0;
-     l_v l_p    l_r           0                0;
-     n_v n_p    n_r           0                0;
-     0   1      tand(tt0)     0                0;
-     0   0      1/cosd(tt0)   0                0]
+A = [ybb yp+aa0 yr-1          g*cos(tt0)/u0   0;
+     l_bb l_p    l_r           0                0;
+     n_bb n_p    n_r           0                0;
+     0   1      tan(tt0)     0                0;
+     0   0      1/cos(tt0)   0                0]
 
 //u = [da; dr]
 
