@@ -17,17 +17,13 @@ n1_R = 1/p5(1)<1.4 //False nivel 2
 //Globalmente nivel 2
 
 s = poly(0,'s')
-
-
-// Função de transeferencia entrada em dr e saida em r
 C = [0 0 1 0 0]
-H = C*inv(s*eye(5,5)-A)*B(:,2)
-
 
 wn = [0.5 1/1.4]
 zeta =[0.6 0.08]
 
-
+// Yaw damper
+H = C*inv(s*eye(5,5)-A)*B(:,2)
 figure(1)
 clf();
 [Ki,s]=kpure(H) // Gains that give pure imaginary closed loop poles
@@ -38,14 +34,24 @@ plot([-0.15 -0.15],[-1 1],'--k')
 set(gca(),"grid",[1 1])
 
 
+
+// ARI
 s = poly(0,'s')
 H = C*inv(s*eye(5,5)-A)*B(:,1)
 
 figure(2)
 clf();
-[Ki,s]=kpure(-H) // Gains that give pure imaginary closed loop poles
-evans(-H,100);
+[Ki,s]=kpure(H) // Gains that give pure imaginary closed loop poles
+evans(H,100);
 sgrid(zeta,wn)
 plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
 plot([-0.15 -0.15],[-2.6 2.6],'--k')
 set(gca(),"grid",[1 1])
+
+
+//LQR
+P = syslin('c',A,B,C)
+Q=diag([3282.2 67 820.7 3282.8 3282.8])
+R=diag([3282.8 3282.8])
+k=lqr(P,Q,R)
+
