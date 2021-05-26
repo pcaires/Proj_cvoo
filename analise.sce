@@ -23,11 +23,12 @@ wn = [0.5 1/1.4]
 zeta =[0.6 0.08]
 
 // Yaw damper
-H = C*inv(s*eye(5,5)-A)*B(:,2)
-figure(1)
+H1 = syslin('c',A,B(:,1),C)
+figure(0)
 clf();
-[Ki,s]=kpure(H) // Gains that give pure imaginary closed loop poles
-evans(H,100);
+[Ki,s]=kpure(H1) // Gains that give pure imaginary closed loop poles
+evans(H1,100);
+title('Yay dampner')
 sgrid(zeta,wn)
 plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
 plot([-0.15 -0.15],[-1 1],'--k')
@@ -37,12 +38,13 @@ set(gca(),"grid",[1 1])
 
 // ARI
 s = poly(0,'s')
-H = C*inv(s*eye(5,5)-A)*B(:,1)
+H2 = syslin('c',A,B(:,1),C)
 
-figure(2)
+figure(1)
 clf();
-[Ki,s]=kpure(H) // Gains that give pure imaginary closed loop poles
-evans(H,100);
+[Ki,s]=kpure(H2) // Gains that give pure imaginary closed loop poles
+evans(H2,100);
+title('ARI')
 sgrid(zeta,wn)
 plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
 plot([-0.15 -0.15],[-2.6 2.6],'--k')
