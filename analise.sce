@@ -23,7 +23,7 @@ wn = [0.5 1/1.4]
 zeta =[0.6 0.08]
 
 // Yaw damper
-H1 = syslin('c',A,B(:,1),C)
+H1 = syslin('c',A,B(:,2),C)
 figure(0)
 clf();
 [Ki,s]=kpure(H1) // Gains that give pure imaginary closed loop poles
