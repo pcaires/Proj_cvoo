@@ -61,23 +61,22 @@ s = poly(0,'s')
 H3 = syslin('c',A,B(:,1),[0 0 1 0 0])
 
 figure(2)
+clf(2);
 evans(H3,100)
-//clf(2);
-//[Ki,s]=kpure(H2) // Gains that give pure imaginary closed loop poles
-//evans(H2,100);
-//title('ARI')
-//sgrid(zeta,wn)
-//plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
-//plot([-0.15 -0.15],[-2.6 2.6],'--k')
-//set(gca(),"grid",[1 1])
+[Ki,s]=kpure(H2) // Gains that give pure imaginary closed loop poles
+title('ARI')
+sgrid(zeta,wn)
+plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
+plot([-0.15 -0.15],[-2.6 2.6],'--k')
+set(gca(),"grid",[1 1])
 
 // Post-tuning graphical elements
-//ch = gca().children;
-//curves = ch(2).children;
-//curves.thickness = 2;
-//asymptotes = ch(ch.type=="Segs");
-//asymptotes.segs_color = color("grey70");
-//mtlb_axis([-1.2 0.1 -5 5])
+ch = gca().children;
+curves = ch(2).children;
+curves.thickness = 2;
+asymptotes = ch(ch.type=="Segs");
+asymptotes.segs_color = color("grey70");
+mtlb_axis([-1.2 0.1 -5 5])
 
 
 //LQR
