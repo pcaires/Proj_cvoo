@@ -28,7 +28,7 @@ figure(0)
 clf();
 [Ki,s]=kpure(H1) // Gains that give pure imaginary closed loop poles
 evans(H1,100);
-title('Yay dampner')
+title('Yaw dampner')
 sgrid(zeta,wn)
 plot([real(s) real(s)],[imag(s) -imag(s)],'*r')
 plot([-0.15 -0.15],[-1 1],'--k')
