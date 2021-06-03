@@ -62,7 +62,6 @@ N_dr = Ndr * Ixz/Iz*Ldr
 
 //x = [ bb; p; r; phi; psi]
 
-
 A = [ybb  yp+aa0 yr-1          g*cos(tt0)/u0    0;
      l_bb l_p    l_r           0                0;
      n_bb n_p    n_r           0                0;

@@ -7,7 +7,6 @@ function rootlocus(sys,gains)
     mtlb_axis([min(real(open_p)) max(real(open_p)) min(imag(open_p)) max(imag(open_p))])
     open_p = S.P{1}
     for k = gains
-        disp(k)
         S = zpk(sys/(1+k*sys))
         p = S.P{1}
         for j=1:1:length(p)
