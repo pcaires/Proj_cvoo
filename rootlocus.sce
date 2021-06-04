@@ -1,5 +1,5 @@
-function rootlocus(sys,gains)
-    clf()
+function rootlocus(sys,gains,fig)
+    clf(fig)
     plzr(sys)
     S = zpk(sys)
     title('Root locus')
@@ -15,5 +15,7 @@ function rootlocus(sys,gains)
             
         end
     end
-    sgrid()
+    wn = [0.5 1/1.4]
+    zeta =[0.6 0.08]
+    sgrid(zeta,wn)
 endfunction
