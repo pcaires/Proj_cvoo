@@ -1,9 +1,15 @@
 clear
-exec('dinamica.sce',-1)
+exec('dados/dinamica.sce',-1)
 
 A = A(1:4,1:4)
 B = B(1:4,:)
 C = eye(4,4)
+
+
+//SISO
+K1 = -.275
+K2 = -735
+K = [0 0 K1 0; K2 0 0 0]
 
 
 x(1) = 0.05*(15*deg)  //bb max
@@ -20,6 +26,9 @@ P = syslin('c',A,B,C)
 Q = diag(1./(x.^2))
 R = diag(1./(u.^2))
 k = lqr(P,Q,R)
-[wn,z] = damp(syslin('c',A-B*k,B,eye(4,4)))
-disp(wn)
-disp(z)
+disp(k)
+disp(K)
+
+//[wn,z] = damp(syslin('c',A-B*k,B,eye(4,4)))
+//disp(wn)
+//disp(z)

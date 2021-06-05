@@ -15,4 +15,4 @@ zeta = 0.6
 poles(3) = -wn*zeta + %i*wn*sqrt(1-zeta^2)
 poles(4) = conj(poles(3))
 
-K = ppol(A, B, poles)
+K1 = ppol(A, B, poles)

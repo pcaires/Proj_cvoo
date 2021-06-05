@@ -1,5 +1,5 @@
 t_ini = 0  // Tempo inicio sim (s)
-t_fin = 120 // Tempo fim de sim (s)
+t_fin = 300 // Tempo fim de sim (s)
 t_s = 1/250 // Periodo de sample (s)
 
 deg = %pi/180 //conversão para radianos
@@ -77,3 +77,6 @@ B = [Yda   Ydr;
      N_da N_dr;
      0    0;
      0    0]
+
+C = eye(5,5)
+D = zeros(5,2)

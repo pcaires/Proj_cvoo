@@ -1,9 +1,10 @@
 clear
-exec('dinamica.sce',-1)
+exec('dados/dinamica.sce',-1)
+
 A = A(1:4,1:4)
 B = B(1:4,:)
 
-// Yaw damper
+// Yaw damper (r/dr)
 H1 = syslin('c',A,B(:,2),[0 0 1 0 ])
 S = zpk(H1)
 
@@ -24,4 +25,6 @@ curves = ch(2).children;
 curves.thickness = 2;
 asymptotes = ch(ch.type=="Segs");
 asymptotes.segs_color = color("grey70");
+
+
 
