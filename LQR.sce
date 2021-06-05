@@ -6,13 +6,14 @@ B = B(1:4,:)
 C = eye(4,4)
 
 
-x(1) = 0.5*(15*deg)  //bb max
-x(2) = 5*deg        //p max
-x(3) = 5*deg        //r max
-x(4) = 0.7*(30*deg)  //phi max
+x(1) = 0.05*(15*deg)  //bb max
+x(2) = 5*deg          //p max
+x(3) = 5*deg          //r max
+x(4) = 0.7*(30*deg)   //phi max
 
-u(1) = 0.0005*18*deg //da max
-u(2) = 0.01*23*deg //dr max
+u(1) = 0.001*18*deg //da max
+u(2) = 0.01*23*deg  //dr max
+
 
 //LQR
 P = syslin('c',A,B,C)
