@@ -1,5 +1,5 @@
 t_ini = 0  // Tempo inicio sim (s)
-t_fin = 300 // Tempo fim de sim (s)
+t_fin = 100 // Tempo fim de sim (s)
 t_s = 1/250 // Periodo de sample (s)
 
 deg = %pi/180 //conversão para radianos

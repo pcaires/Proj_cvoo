@@ -1,6 +1,6 @@
-exec('SAE/MIMO/LQR.sce',-1)
+exec('SAE/SISO/SISO.sce',-1)
 
-A1 = A-B*K
+A1 = A-B*K_SISO
 
 L = diag([-1/1.5 -1/1.5])
 
@@ -26,17 +26,22 @@ R = diag(1./(u.^2))
 
 K2 = lqr(P,Q,R)
 
-Pf = syslin('c',A1-B*K2,B,eye(4,4))
-[wn,z] = damp(Pf)
-disp(wn)
-disp(z)
-disp(K2)
+K_MIMO = K2 + K_SISO
 
-time = [0:0.1:15]
-Sl = ss2tf(Pf)(:,1)
 
-Y = csim('impulse',time,Sl*deg)
-plot(time,Y')
-////x = [ bb; p; r; phi; psi]
-legend('bb','p','r','phi')
-xgrid(1)
+//Pf = syslin('c',A1-B*K2,B,eye(4,4))
+
+//[wn,z] = damp(Pf)
+
+//disp(wn)
+//disp(z)
+//disp(K2)
+
+//time = [0:0.1:15]
+//Sl = ss2tf(Pf)(:,1)
+//
+//Y = csim('impulse',time,Sl*deg)
+//plot(time,Y')
+//////x = [ bb; p; r; phi; psi]
+//legend('bb','p','r','phi')
+//xgrid(1)
