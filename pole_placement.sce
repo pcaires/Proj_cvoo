@@ -6,10 +6,10 @@ C = eye(4,4)
 D = zeros(4,2)
 
 //Colocação de polos
-poles(1) = 0.03
-poles(2) = -0.72
+poles(1) = -0.01
+poles(2) = -0.73
 
-wn = 1
+wn = 0.7
 zeta = 0.6
 
 poles(3) = -wn*zeta + %i*wn*sqrt(1-zeta^2)
