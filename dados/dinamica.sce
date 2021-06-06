@@ -1,5 +1,5 @@
 t_ini = 0  // Tempo inicio sim (s)
-t_fin = 100 // Tempo fim de sim (s)
+t_fin = 300 // Tempo fim de sim (s)
 t_s = 1/250 // Periodo de sample (s)
 
 deg = %pi/180 //conversão para radianos
@@ -59,7 +59,7 @@ n_r = nr + Ixz/Iz*lr
 L_da = Lda + Ixz/Ix*Nda
 L_dr = Ldr + Ixz/Ix*Ndr
 N_da = Nda + Ixz/Iz*Lda
-N_dr = Ndr * Ixz/Iz*Ldr
+N_dr = Ndr + Ixz/Iz*Ldr
 
 
 //x = [ bb; p; r; phi; psi]

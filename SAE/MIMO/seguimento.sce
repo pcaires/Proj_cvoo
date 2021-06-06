@@ -10,13 +10,13 @@ C1 = [1 0 0 0;
 C_ = C1*A1 - L*C1
 D_ = C1*B
 
-x(1) = 0.7*(15*deg)   //bb max
+x(1) = 0.05*(15*deg)  //bb max
 x(2) = 5*deg          //p max
 x(3) = 5*deg          //r max
-x(4) = 0.7*(30*deg)   //phi max
+x(4) = 0.5*(30*deg)   //phi max
 
-u(1) = 0.002*18*deg   //da max
-u(2) = 0.02*23*deg     //dr max
+u(1) = 0.001*18*deg   //da max
+u(2) = 0.01*23*deg    //dr max
 
 P = syslin('c',A1,B,C_,D_)
 
@@ -29,19 +29,19 @@ K2 = lqr(P,Q,R)
 K_MIMO = K2 + K_SISO
 
 
-//Pf = syslin('c',A1-B*K2,B,eye(4,4))
-
+//Pf = syslin('c',A-B*K_MIMO,B,eye(4,4))
+//
 //[wn,z] = damp(Pf)
-
+//
 //disp(wn)
 //disp(z)
-//disp(K2)
-
-//time = [0:0.1:15]
+//disp(K_MIMO)
+//
+//time = [0:0.1:100]
 //Sl = ss2tf(Pf)(:,1)
 //
 //Y = csim('impulse',time,Sl*deg)
 //plot(time,Y')
-//////x = [ bb; p; r; phi; psi]
+////x = [ bb; p; r; phi; psi]
 //legend('bb','p','r','phi')
 //xgrid(1)

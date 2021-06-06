@@ -6,3 +6,6 @@ C = eye(5,5)
 D = zeros(5,2)
 
 K_MIMO = [K_MIMO zeros(2,1)]
+
+T = 2
+Te = 2
