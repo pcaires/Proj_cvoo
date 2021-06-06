@@ -16,7 +16,7 @@ if draw_rloc then
     H1 = (-1)*H1 //Root locus para ganhos negativos/ realimentação positiva 
     evans(H1,100)
     
-    title('Yaw damp')
+    title('Yaw Damper')
     wn = [0.5 1/1.4]
     zeta =[0.6 0.08]
     mtlb_axis([-.8 .1 -2 2])
@@ -45,7 +45,7 @@ if draw_rloc then
     H1 = (-1)*H1 //Root locus para ganhos negativos/ realimentação positiva 
     evans(H1,0.06)
     
-    title('p/da após Yaw Dampner')
+    title('p/da após Yaw Damper')
     wn = [0.5 1/1.4]
     zeta =[0.6 0.08]
     //mtlb_axis([-.8 .1 -2 2])
@@ -66,6 +66,7 @@ end
 K2 = -0.00323
 K_SISO = [0 K2 0 0; 0 0 K1 0]
 A2 = A-B*K_SISO
+
 if draw_rloc then
     P = syslin('c',A2,B,C)
     [wn,z] = damp(P)

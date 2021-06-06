@@ -40,7 +40,7 @@ K_MIMO = K2 + K_SISO
 //time = [0:0.1:100]
 //Sl = ss2tf(Pf)(:,1)
 //
-//Y = csim('impulse',time,Sl*deg)
+//Y = csim('impulse',time,Sl)
 //plot(time,Y')
 ////x = [ bb; p; r; phi; psi]
 //legend('bb','p','r','phi')
