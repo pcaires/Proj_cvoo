@@ -29,19 +29,19 @@ K2 = lqr(P,Q,R)
 K_MIMO = K2 + K_SISO
 
 
-//Pf = syslin('c',A-B*K_MIMO,B,eye(4,4))
-//
-//[wn,z] = damp(Pf)
-//
-//disp(wn)
-//disp(z)
-//disp(K_MIMO)
-//
-//time = [0:0.1:100]
-//Sl = ss2tf(Pf)(:,1)
-//
-//Y = csim('impulse',time,Sl)
-//plot(time,Y')
-////x = [ bb; p; r; phi; psi]
-//legend('bb','p','r','phi')
-//xgrid(1)
+Pf = syslin('c',A-B*K_MIMO,B,eye(4,4))
+
+[wn,z] = damp(Pf)
+
+disp(wn)
+disp(z)
+disp(K_MIMO)
+
+time = [0:0.1:100]
+Sl = ss2tf(Pf)(1:2,1)
+
+Y = csim('impulse',time,Sl)
+plot(time,Y')
+//x = [ bb; p; r; phi; psi]
+legend('bb','p','r','phi')
+xgrid(1)
